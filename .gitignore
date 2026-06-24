@@ -1,0 +1,25 @@
+# Python / Environments
+.venv/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Large Datasets
+*.csv
+telemetry_data.csv
+model_evaluation_metrics.csv
+
+# Large Machine Learning Models & Checkpoints
+*.pt
+*.pkl
+tg-roberta-finetuned/
+tg_roberta_checkpoints/
+isolated_test/tg-roberta-finetuned/
+isolated_test/tg_roberta_checkpoints/
+
+# Database files
+*.db
+tg_pfpke.db

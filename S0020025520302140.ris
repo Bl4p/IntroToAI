@@ -1,0 +1,20 @@
+TY  - JOUR
+T1  - SiTGRU: Single-Tunnelled Gated Recurrent Unit for Abnormality Detection
+AU  - Fanta, Habtamu
+AU  - Shao, Zhiwen
+AU  - Ma, Lizhuang
+JO  - Information Sciences
+VL  - 524
+SP  - 15
+EP  - 32
+PY  - 2020
+DA  - 2020/07/01/
+SN  - 0020-0255
+DO  - https://doi.org/10.1016/j.ins.2020.03.034
+UR  - https://www.sciencedirect.com/science/article/pii/S0020025520302140
+KW  - Abnormality detection
+KW  - Gated recurrent unit
+KW  - Abnormality generalization
+KW  - Recurrent neural network
+AB  - Abnormality detection is a challenging task due to the dependence on a specific context and the unconstrained variability of practical scenarios. In recent years, it has benefited from the powerful features learnt by deep neural networks, and handcrafted features specialized for abnormality detectors. However, these approaches with large complexity still have limitations in handling long-term sequential data (e.g., videos), and their learnt features do not thoroughly capture useful information. Recurrent Neural Networks (RNNs) have been shown to be capable of robustly dealing with temporal data in long-term sequences. In this paper, we propose a novel version of Gated Recurrent Unit (GRU), called Single-Tunnelled GRU for abnormality detection. Particularly, the Single-Tunnelled GRU discards the heavy-weighted reset gate from GRU cells that overlooks the importance of past content by only favouring current input to obtain an optimized single-gated-cell model. Moreover, we substitute the hyperbolic tangent activation in standard GRUs with sigmoid activation, as the former suffers from performance loss in deeper networks. Empirical results show that our proposed optimized-GRU model outperforms standard GRU and Long Short-Term Memory (LSTM) networks on most metrics for detection and generalization tasks on CUHK Avenue and UCSD datasets. The model is also computationally efficient with reduced training and testing time over standard RNNs.
+ER  - 

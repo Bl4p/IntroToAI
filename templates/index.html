@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TG-PFPKE — Biometric Authentication System</title>
+    <meta name="description" content="Telemetry-Gated Privacy-Friendly Public Key Encryption with AI-powered risk evaluation">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-brand">
+                <div>
+                    <h1>TG-PFPKE</h1>
+                    <p class="header-subtitle">Telemetry-Gated Biometric Authentication</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="app-main">
+        <!-- User Panel -->
+        <section class="panel user-panel">
+            <nav class="tab-nav">
+                <button class="tab-btn active" data-tab="enroll" id="tab-btn-enroll">
+                    Enroll
+                </button>
+                <button class="tab-btn" data-tab="encrypt" id="tab-btn-encrypt">
+                    Encrypt
+                </button>
+                <button class="tab-btn" data-tab="decrypt" id="tab-btn-decrypt">
+                    Decrypt
+                </button>
+                <div class="tab-indicator" id="tab-indicator"></div>
+            </nav>
+
+            <!-- Enroll Tab -->
+            <div class="tab-content active" id="tab-enroll">
+                <div class="form-layout">
+                    <div class="form-section">
+                        <label class="form-label">Fingerprint Image</label>
+                        <select class="form-select" id="enroll-fingerprint">
+                            <option value="">Loading fingerprints...</option>
+                        </select>
+                        <p class="form-hint">Select from the SOCOFing dataset (first 100 images)</p>
+                    </div>
+                    <div class="fingerprint-preview-wrap">
+                        <div class="fingerprint-preview" id="enroll-preview">
+                            <span class="preview-placeholder">Select a fingerprint</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-enroll" disabled>
+                    <span class="btn-text">Enroll Fingerprint</span>
+                    <span class="btn-loader"></span>
+                </button>
+                <div class="result-area" id="enroll-result"></div>
+            </div>
+
+            <!-- Encrypt Tab -->
+            <div class="tab-content" id="tab-encrypt">
+                <div class="form-section">
+                    <label class="form-label">Enrolled User</label>
+                    <select class="form-select" id="encrypt-user">
+                        <option value="">No enrolled users</option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label class="form-label">Document Title</label>
+                    <input type="text" class="form-input" id="encrypt-title" placeholder="e.g. Financial Report Q3">
+                </div>
+                <div class="form-section">
+                    <label class="form-label">Secret Content</label>
+                    <textarea class="form-textarea" id="encrypt-content" rows="5" placeholder="Type the content to encrypt..."></textarea>
+                </div>
+                <button class="btn btn-primary" id="btn-encrypt" disabled>
+                    <span class="btn-text">Encrypt Message</span>
+                    <span class="btn-loader"></span>
+                </button>
+                <div class="result-area" id="encrypt-result"></div>
+            </div>
+
+            <!-- Decrypt Tab -->
+            <div class="tab-content" id="tab-decrypt">
+                <div class="form-section">
+                    <label class="form-label">Select User to Authenticate</label>
+                    <select class="form-select" id="decrypt-user">
+                        <option value="">No encrypted messages</option>
+                    </select>
+                </div>
+                <div class="form-section" id="decrypt-doc-section" style="display:none;">
+                    <label class="form-label">Select Document to Decrypt</label>
+                    <select class="form-select" id="decrypt-message">
+                        <option value="">— Select document —</option>
+                    </select>
+                </div>
+                <div class="form-layout">
+                    <div class="form-section">
+                        <label class="form-label">Biometric Scan Noise Override</label>
+                        <div>
+                            <input type="number" class="form-input" id="decrypt-noise" min="0.01" max="0.30" step="0.01" value="0.06" style="width: 100px;">
+                        </div>
+                        <p class="form-hint" style="margin-bottom:12px;">Adjust physical scan variance to test threshold failure vs AI risk engine.</p>
+
+                        <label class="form-label">Telemetry Override (Optional)</label>
+                        <div style="display:flex; gap:8px; margin-bottom:8px;">
+                            <input type="text" class="form-input" id="override-ip" placeholder="IP Address (e.g. 192.168.1.5)">
+                            <input type="text" class="form-input" id="override-device" placeholder="Device Hash">
+                        </div>
+                        <div style="display:flex; gap:8px;">
+                            <input type="number" class="form-input" id="override-lat" placeholder="Latitude" step="0.0001">
+                            <input type="number" class="form-input" id="override-lon" placeholder="Longitude" step="0.0001">
+                        </div>
+                        <p class="form-hint">Leave blank to auto-generate based on public key.</p>
+                        
+                        <label class="form-label" style="margin-top:20px;">Fingerprint Preview</label>
+                        <div class="fingerprint-preview-wrap" style="justify-content: flex-start;">
+                            <div class="fingerprint-preview" id="decrypt-preview" style="width: 80px; height: 100px;">
+                                <span class="preview-placeholder">Select a user</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-decrypt" disabled>
+                    <span class="btn-text">Authenticate &amp; Decrypt</span>
+                    <span class="btn-loader"></span>
+                </button>
+                <div class="result-area" id="decrypt-result"></div>
+                <div id="inline-decrypted-content" style="display:none; margin-top:20px; padding:16px; background:var(--bg-input); border:1px solid var(--border); border-radius:var(--radius-sm); color:var(--success); font-family:var(--mono); white-space:pre-wrap; word-break:break-all;"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Debug Panel (Collapsible) -->
+    <section class="debug-panel" id="debug-panel">
+        <button class="debug-toggle" id="debug-toggle">
+            <span>Debug Panel</span>
+        </button>
+
+        <div class="debug-content" id="debug-content">
+            <div class="debug-grid">
+                <!-- Model Picker -->
+                <div class="debug-card" id="debug-model">
+                    <h3 class="debug-card-title">Risk Engine</h3>
+                    <div class="model-picker">
+                        <label class="radio-label">
+                            <input type="radio" name="engine" value="gru" checked>
+                            <span class="radio-mark"></span>
+                            <span>GRU</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="engine" value="iforest">
+                            <span class="radio-mark"></span>
+                            <span>Isolation Forest</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="engine" value="transformer">
+                            <span class="radio-mark"></span>
+                            <span>Transformer</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Fuzzy Vectors -->
+                <div class="debug-card" id="debug-vectors">
+                    <h3 class="debug-card-title">Fuzzy Picture Vectors</h3>
+                    <div class="debug-mono" id="vectors-content">
+                        <span class="debug-empty">Run an operation to see vector data</span>
+                    </div>
+                </div>
+
+                <!-- Risk Engine Output -->
+                <div class="debug-card" id="debug-risk">
+                    <h3 class="debug-card-title">Risk Evaluation</h3>
+                    <div class="debug-mono" id="risk-content">
+                        <span class="debug-empty">Run decrypt to see risk data</span>
+                    </div>
+                </div>
+
+                <!-- Telemetry -->
+                <div class="debug-card" id="debug-telemetry">
+                    <h3 class="debug-card-title">Telemetry</h3>
+                    <div class="debug-mono" id="telemetry-content">
+                        <span class="debug-empty">No telemetry captured yet</span>
+                    </div>
+                </div>
+
+                <!-- Decrypted Text -->
+                <div class="debug-card debug-card-wide" id="debug-text">
+                    <h3 class="debug-card-title">Decrypted Content</h3>
+                    <div class="debug-mono" id="text-content">
+                        <span class="debug-empty">No decrypted content</span>
+                    </div>
+                </div>
+
+                <!-- History -->
+                <div class="debug-card debug-card-wide" id="debug-history">
+                    <h3 class="debug-card-title">Login History <span class="badge badge-dim" id="history-count">0 entries</span></h3>
+                    <div id="history-table-wrap">
+                        <span class="debug-empty">No history available</span>
+                    </div>
+                </div>
+
+                <!-- Database Explorer -->
+                <div class="debug-card debug-card-full" id="debug-database">
+                    <h3 class="debug-card-title">Database Explorer</h3>
+                    <div class="db-controls">
+                        <select class="form-select form-select-sm" id="db-table-select">
+                            <option value="enrollments">enrollments</option>
+                            <option value="login_attempts">login_attempts</option>
+                        </select>
+                        <input type="text" class="form-input form-select-sm" id="db-search" placeholder="Search IP, PK, or Device Hash..." style="width: 250px;">
+                        <button class="btn btn-sm" id="btn-db-refresh">Refresh</button>
+                        <span class="db-page-info" id="db-page-info"></span>
+                        <div class="db-pagination">
+                            <button class="btn btn-sm" id="btn-db-prev" disabled>← Prev</button>
+                            <button class="btn btn-sm" id="btn-db-next" disabled>Next →</button>
+                        </div>
+                    </div>
+                    <div class="db-table-wrap" id="db-table-wrap">
+                        <span class="debug-empty">Click Refresh to load data</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

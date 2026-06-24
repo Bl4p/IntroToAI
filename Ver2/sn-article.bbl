@@ -1,0 +1,582 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{38}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Lee et~al.}{2008}]{bib3}
+\begin{botherref}
+\oauthor{\bsnm{Lee}, \binits{Y.J.}},
+\oauthor{\bsnm{Park}, \binits{K.R.}},
+\oauthor{\bsnm{Lee}, \binits{S.J.}},
+\oauthor{\bsnm{Bae}, \binits{K.}},
+\oauthor{\bsnm{Kim}, \binits{J.}}:
+A New Method for Generating an Invariant Iris Private Key Based on the Fuzzy
+  Vault System
+(2008).
+\url{https://ieeexplore.ieee.org/document/4595625/}
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Pham et~al.}{}]{bib1}
+\begin{botherref}
+\oauthor{\bsnm{Pham}, \binits{V.H.}},
+\oauthor{\bsnm{Dat}, \binits{N.T.}},
+\oauthor{\bsnm{Anh}, \binits{N.D.}}:
+Applying fuzzy picture public encryption in corporate security models
+\end{botherref}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Li and Nepal}{2017}]{bib2}
+\begin{botherref}
+\oauthor{\bsnm{Li}, \binits{N.}},
+\oauthor{\bsnm{Nepal}, \binits{S.}}:
+Fuzzy Extractors for Biometric Identification
+(2017).
+\url{https://ieeexplore.ieee.org/document/7980010}
+\end{botherref}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Adamovic et~al.}{2016}]{bib6}
+\begin{botherref}
+\oauthor{\bsnm{Adamovic}, \binits{S.}},
+\oauthor{\bsnm{Milosavljevic}, \binits{M.}},
+\oauthor{\bsnm{Veinovic}, \binits{M.}},
+\oauthor{\bsnm{Sarac}, \binits{M.}},
+\oauthor{\bsnm{Jevremovic}, \binits{A.}}:
+Fuzzy commitment scheme for generation of cryptographic keys based on iris
+  biometrics
+(2016).
+\url{https://www.researchgate.net/publication/309428306_Fuzzy_Commitment_Scheme_for_Generation_of_Cryptographic_Keys_Based_on_Iris_Biometrics}
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Katsumata et~al.}{2021}]{bib9}
+\begin{botherref}
+\oauthor{\bsnm{Katsumata}, \binits{S.}},
+\oauthor{\bsnm{Matsuda}, \binits{T.}},
+\oauthor{\bsnm{Nakamura}, \binits{W.}},
+\oauthor{\bsnm{Ohara}, \binits{K.}},
+\oauthor{\bsnm{Takahashi}, \binits{K.}}:
+Revisiting Fuzzy Signatures: Towards a More Risk-Free Cryptographic
+  Authentication System based on Biometrics
+(2021).
+\url{https://arxiv.org/abs/2112.08658}
+\end{botherref}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Aramide}{2023}]{bib19}
+\begin{botherref}
+\oauthor{\bsnm{Aramide}, \binits{O.O.}}:
+AI-Driven Identity Verification and Authentication in Networks: Enhancing
+  Accuracy, Speed, and Security through Biometrics and Behavioral Analytics
+(2023).
+\url{https://smsjournals.com/index.php/Adhyayan/article/view/3371}
+\end{botherref}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Panja et~al.}{2026}]{bib7}
+\begin{botherref}
+\oauthor{\bsnm{Panja}, \binits{S.}},
+\oauthor{\bsnm{Tripathi}, \binits{N.}},
+\oauthor{\bsnm{Jiang}, \binits{S.}},
+\oauthor{\bsnm{Safavi-Naini}, \binits{R.}}:
+Robust and Reusable Fuzzy Extractor for Low-Entropy Distributions and
+  Application to User Authentication
+(2026).
+\url{https://ieeexplore.ieee.org/document/11418906}
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Panja et~al.}{2025}]{bib8}
+\begin{botherref}
+\oauthor{\bsnm{Panja}, \binits{S.}},
+\oauthor{\bsnm{Jiang}, \binits{S.}},
+\oauthor{\bsnm{Safavi-Naini}, \binits{R.}}:
+Information-Theoretically Secure, Robust, and Reusable Fuzzy Extractors for
+  Structured Sources
+(2025).
+\url{https://dl.acm.org/doi/10.1145/3733820.3764683}
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Jana et~al.}{2020}]{bib11}
+\begin{botherref}
+\oauthor{\bsnm{Jana}, \binits{A.}},
+\oauthor{\bsnm{Paudel}, \binits{B.}},
+\oauthor{\bsnm{Sarker}, \binits{M.K.}},
+\oauthor{\bsnm{Ebrahimi}, \binits{M.}},
+\oauthor{\bsnm{Hitzler}, \binits{P.}},
+\oauthor{\bsnm{Amariucai}, \binits{G.T.}}:
+Neural Fuzzy Extractors: A Secure Way to Use Artificial Neural Networks for
+  Biometric User Authentication
+(2020).
+\url{https://arxiv.org/abs/2003.08433}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Yirga et~al.}{2025}]{bib4}
+\begin{botherref}
+\oauthor{\bsnm{Yirga}, \binits{T.G.}},
+\oauthor{\bsnm{Yirga}, \binits{H.G.}},
+\oauthor{\bsnm{Addisu}, \binits{E.G.}}:
+Cryptographic key generation using deep learning with biometric face and finger
+  vein data
+(2025).
+\url{https://www.researchgate.net/publication/391735410_Cryptographic_key_generation_using_deep_learning_with_biometric_face_and_finger_vein_data}
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Tran et~al.}{2025}]{bib5}
+\begin{botherref}
+\oauthor{\bsnm{Tran}, \binits{H.Y.}},
+\oauthor{\bsnm{Hu}, \binits{J.}},
+\oauthor{\bsnm{Hu}, \binits{W.}}:
+Biometrics-Based Authenticated Key Exchange with Multi-Factor Fuzzy Extractor
+(2025).
+\url{https://arxiv.org/abs/2405.11456}
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Khubchandani et~al.}{2025}]{bib10}
+\begin{botherref}
+\oauthor{\bsnm{Khubchandani}, \binits{P.}},
+\oauthor{\bsnm{Khubchandani}, \binits{J.}},
+\oauthor{\bsnm{Bhand}, \binits{K.}}:
+A Fuzzy Logic-Based Cryptographic Framework for Real-Time Dynamic Key
+  Generation for Enhanced Data Encryption
+(2025).
+\url{https://arxiv.org/abs/2511.14132}
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Cadet et~al.}{2026}]{bib12}
+\begin{botherref}
+\oauthor{\bsnm{Cadet}, \binits{X.}},
+\oauthor{\bsnm{Singh}, \binits{A.V.}},
+\oauthor{\bsnm{Mamania}, \binits{H.}},
+\oauthor{\bsnm{Koh}, \binits{E.}},
+\oauthor{\bsnm{Fitts}, \binits{A.}},
+\oauthor{\bsnm{Van~Bruggen}, \binits{D.}},
+\oauthor{\bsnm{Boboila}, \binits{S.}},
+\oauthor{\bsnm{Chin}, \binits{P.}},
+\oauthor{\bsnm{Oprea}, \binits{A.}}:
+Retrieval-Augmented LLMs for Security Incident Analysis
+(2026).
+\url{https://arxiv.org/abs/2603.18196}
+\end{botherref}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Borah et~al.}{2025}]{bib21}
+\begin{botherref}
+\oauthor{\bsnm{Borah}, \binits{A.}},
+\oauthor{\bsnm{Alam}, \binits{M.T.}},
+\oauthor{\bsnm{Rastogi}, \binits{N.}}:
+Adapting Large Language Models to Emerging Cybersecurity using Retrieval
+  Augmented Generation
+(2025).
+\url{https://arxiv.org/abs/2510.27080}
+\end{botherref}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Hu et~al.}{2025}]{bib22}
+\begin{botherref}
+\oauthor{\bsnm{Hu}, \binits{T.}},
+\oauthor{\bsnm{Zhuang}, \binits{S.}},
+\oauthor{\bsnm{Guo}, \binits{Z.}},
+\oauthor{\bsnm{Sun}, \binits{J.}},
+\oauthor{\bsnm{Liu}, \binits{Y.}},
+\oauthor{\bsnm{Ma}, \binits{W.}},
+\oauthor{\bsnm{Wang}, \binits{H.}},
+\oauthor{\bsnm{Zhao}, \binits{L.}},
+\oauthor{\bsnm{Zhang}, \binits{X.}}:
+A Novel LLM Approach of Cybersecurity Threat Analysis and Response
+(2025).
+\url{https://dl.acm.org/doi/10.1145/3755881.3755888}
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Molleti et~al.}{2024}]{bib13}
+\begin{botherref}
+\oauthor{\bsnm{Molleti}, \binits{R.}},
+\oauthor{\bsnm{Goje}, \binits{V.}},
+\oauthor{\bsnm{Luthra}, \binits{P.}},
+\oauthor{\bsnm{Raghavan}, \binits{P.}}:
+Automated threat detection and response using LLM agents
+(2024).
+\url{https://wjarr.com/content/automated-threat-detection-and-response-using-llm-agents}
+\end{botherref}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Gao et~al.}{2026}]{bib15}
+\begin{botherref}
+\oauthor{\bsnm{Gao}, \binits{Y.}},
+\oauthor{\bsnm{Hammar}, \binits{K.}},
+\oauthor{\bsnm{Li}, \binits{T.}}:
+In-Context Autonomous Network Incident Response: An End-to-End Large Language
+  Model Agent Approach
+(2026).
+\url{https://arxiv.org/abs/2602.13156}
+\end{botherref}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Arfan~Uddin et~al.}{2026}]{bib30}
+\begin{botherref}
+\oauthor{\bsnm{Arfan~Uddin}, \binits{M.}},
+\oauthor{\bsnm{Weerasinghe}, \binits{S.}},
+\oauthor{\bsnm{Gajewski}, \binits{D.}},
+\oauthor{\bsnm{Akbarsharifi}, \binits{M.}},
+\oauthor{\bsnm{Akbarsharifi}, \binits{R.}},
+\oauthor{\bsnm{Stoner}, \binits{C.}},
+\oauthor{\bsnm{Cerny}, \binits{T.}},
+\oauthor{\bsnm{He}, \binits{S.}}:
+Microservice logs analysis employing AI: A systematic literature review
+(2026).
+\url{https://www.sciencedirect.com/science/article/abs/pii/S0164121226000208}
+\end{botherref}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Du et~al.}{2017}]{bib27}
+\begin{botherref}
+\oauthor{\bsnm{Du}, \binits{M.}},
+\oauthor{\bsnm{Li}, \binits{F.}},
+\oauthor{\bsnm{Zheng}, \binits{G.}},
+\oauthor{\bsnm{Srikumar}, \binits{V.}}:
+DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning
+(2017).
+\url{https://dl.acm.org/doi/10.1145/3133956.3134015}
+\end{botherref}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Huang et~al.}{2020}]{bib29}
+\begin{botherref}
+\oauthor{\bsnm{Huang}, \binits{S.}},
+\oauthor{\bsnm{Liu}, \binits{Y.}},
+\oauthor{\bsnm{Fung}, \binits{C.}},
+\oauthor{\bsnm{He}, \binits{R.}},
+\oauthor{\bsnm{Zhao}, \binits{Y.}},
+\oauthor{\bsnm{Yang}, \binits{H.}},
+\oauthor{\bsnm{Luan}, \binits{Z.}}:
+HitAnomaly: Hierarchical Transformers for Anomaly Detection in System Log
+(2020).
+\url{https://ieeexplore.ieee.org/document/9244088}
+\end{botherref}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{De~la Cruz~Cabello et~al.}{2025}]{bib14}
+\begin{botherref}
+\oauthor{\bsnm{Cruz~Cabello}, \binits{M.}},
+\oauthor{\bsnm{Sales}, \binits{T.P.}},
+\oauthor{\bsnm{Machado}, \binits{M.R.}}:
+AIOps for log anomaly detection in the era of LLMs: A systematic literature
+  review
+(2025).
+\url{https://www.sciencedirect.com/science/article/pii/S2667305325001346}
+\end{botherref}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Palma et~al.}{2025}]{bib23}
+\begin{botherref}
+\oauthor{\bsnm{Palma}, \binits{G.}},
+\oauthor{\bsnm{Cecchi}, \binits{G.}},
+\oauthor{\bsnm{Caronna}, \binits{M.}},
+\oauthor{\bsnm{Rizzo}, \binits{A.}}:
+Leveraging Large Language Models for Scalable and Explainable Cybersecurity Log
+  Analysis
+(2025).
+\url{https://www.mdpi.com/2624-800X/5/3/55}
+\end{botherref}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Benabderrahmane et~al.}{2025}]{bib24}
+\begin{botherref}
+\oauthor{\bsnm{Benabderrahmane}, \binits{S.}},
+\oauthor{\bsnm{Valtchev}, \binits{P.}},
+\oauthor{\bsnm{Cheney}, \binits{J.}},
+\oauthor{\bsnm{Rahwan}, \binits{T.}}:
+APT-LLM: Embedding-Based Anomaly Detection of Cyber Advanced Persistent Threats
+  Using Large Language Models
+(2025).
+\url{https://axi.lims.ac.uk/paper/2502.09385}
+\end{botherref}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Peng et~al.}{2025}]{bib28}
+\begin{botherref}
+\oauthor{\bsnm{Peng}, \binits{A.}},
+\oauthor{\bsnm{Chathoth}, \binits{A.K.}},
+\oauthor{\bsnm{Lee}, \binits{S.}}:
+Log Anomaly Detection with Large Language Models via Knowledge-Enriched Fusion
+(2025).
+\url{https://arxiv.org/abs/2512.11997}
+\end{botherref}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{Cai et~al.}{2025}]{bib26}
+\begin{botherref}
+\oauthor{\bsnm{Cai}, \binits{P.}},
+\oauthor{\bsnm{Ryan}, \binits{R.}},
+\oauthor{\bsnm{Karie}, \binits{N.M.}}:
+LLMLogAnalyzer: A Clustering-Based Log Analysis Chatbot using Large Language
+  Models
+(2025).
+\url{https://arxiv.org/abs/2510.24031}
+\end{botherref}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{Cui et~al.}{2024}]{bib25}
+\begin{botherref}
+\oauthor{\bsnm{Cui}, \binits{T.}},
+\oauthor{\bsnm{Ma}, \binits{S.}},
+\oauthor{\bsnm{Chen}, \binits{Z.}},
+\oauthor{\bsnm{Xiao}, \binits{T.}},
+\oauthor{\bsnm{Tao}, \binits{S.}},
+\oauthor{\bsnm{Liu}, \binits{Y.}},
+\oauthor{\bsnm{Zhang}, \binits{S.}},
+\oauthor{\bsnm{Lin}, \binits{D.}},
+\oauthor{\bsnm{Liu}, \binits{C.}},
+\oauthor{\bsnm{Cai}, \binits{Y.}},
+\oauthor{\bsnm{Meng}, \binits{W.}},
+\oauthor{\bsnm{Sun}, \binits{Y.}},
+\oauthor{\bsnm{Pei}, \binits{D.}}:
+LogEval: A Comprehensive Benchmark Suite for Large Language Models In Log
+  Analysis
+(2024).
+\url{https://huggingface.co/papers/2407.01896}
+\end{botherref}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{Mahmood et~al.}{2025}]{bib20}
+\begin{botherref}
+\oauthor{\bsnm{Mahmood}, \binits{R.}},
+\oauthor{\bsnm{Ahmed}, \binits{T.}},
+\oauthor{\bsnm{Peddinti}, \binits{S.T.}},
+\oauthor{\bsnm{Huang}, \binits{D.Y.}}:
+Large Language Models for Real-World IoT Device Identification.
+(2025).
+\url{https://arxiv.org/abs/2510.13817}
+\end{botherref}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{Hassanpour et~al.}{2024}]{bib16}
+\begin{botherref}
+\oauthor{\bsnm{Hassanpour}, \binits{A.}},
+\oauthor{\bsnm{Kowsari}, \binits{Y.}},
+\oauthor{\bsnm{Shahreza}, \binits{H.O.}},
+\oauthor{\bsnm{Yang}, \binits{B.}},
+\oauthor{\bsnm{Marcel}, \binits{S.}}:
+ChatGPT and biometrics: an assessment of face recognition, gender detection,
+  and age estimation capabilities
+(2024).
+\url{https://arxiv.org/abs/2403.02965}
+\end{botherref}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{Lee and Park}{2024}]{bib17}
+\begin{botherref}
+\oauthor{\bsnm{Lee}, \binits{T.A.}},
+\oauthor{\bsnm{Park}, \binits{H.B.}}:
+Cyber Coercion Detection Using LLM-Assisted Multimodal Biometric System
+(2024).
+\url{https://www.mdpi.com/2076-3417/15/19/10658}
+\end{botherref}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Johnson and Williams}{2024}]{bib18}
+\begin{botherref}
+\oauthor{\bsnm{Johnson}, \binits{K.}},
+\oauthor{\bsnm{Williams}, \binits{A.}}:
+Multimodal LLM-Enhanced Biometric Authentication Framework: Integrating Dynamic
+  Behavioral Patterns with Privacy-Preserving Analysis
+(2024).
+\url{https://www.researchgate.net/publication/392505235_Multimodal_LLM-Enhanced_Biometric_Authentication_Framework_Integrating_Dynamic_Behavioral_Patterns_with_Privacy-Preserving_Analysis}
+\end{botherref}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{K~V~K and Reddy}{2026}]{bib33}
+\begin{botherref}
+\oauthor{\bsnm{K~V~K}, \binits{C.}},
+\oauthor{\bsnm{Reddy}, \binits{V.L.}}:
+Deep learning-based intrusion detection for cloud environments using Modified
+  Stacked Bidirectional Gated Recurrent Unit
+(2026).
+\url{https://doi.org/10.1007/s10791-026-10020-4}
+\end{botherref}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Imrana et~al.}{2024}]{bib34}
+\begin{botherref}
+\oauthor{\bsnm{Imrana}, \binits{Y.}},
+\oauthor{\bsnm{Xiang}, \binits{Y.}},
+\oauthor{\bsnm{Ali}, \binits{L.}},
+\oauthor{\bsnm{Noor}, \binits{A.}},
+\oauthor{\bsnm{Sarpong}, \binits{K.}},
+\oauthor{\bsnm{Abdullah}, \binits{M.A.}}:
+CNN-GRU-FF: a double-layer feature fusion-based network intrusion detection
+  system using convolutional neural network and gated recurrent units
+(2024).
+\url{https://doi.org/10.1007/s40747-023-01313-y}
+\end{botherref}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{Fanta et~al.}{2020}]{bib36}
+\begin{botherref}
+\oauthor{\bsnm{Fanta}, \binits{H.}},
+\oauthor{\bsnm{Shao}, \binits{Z.}},
+\oauthor{\bsnm{Ma}, \binits{L.}}:
+SiTGRU: Single-Tunnelled Gated Recurrent Unit for Abnormality Detection
+(2020).
+\url{https://www.sciencedirect.com/science/article/pii/S0020025520302140}
+\end{botherref}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Tang et~al.}{2023}]{bib38}
+\begin{botherref}
+\oauthor{\bsnm{Tang}, \binits{C.}},
+\oauthor{\bsnm{Xu}, \binits{L.}},
+\oauthor{\bsnm{Yang}, \binits{B.}},
+\oauthor{\bsnm{Tang}, \binits{Y.}},
+\oauthor{\bsnm{Zhao}, \binits{D.}}:
+GRU-Based Interpretable Multivariate Time Series Anomaly Detection in
+  Industrial Control System
+(2023).
+\url{https://www.sciencedirect.com/science/article/pii/S0167404823000044}
+\end{botherref}
+\endbibitem
+
+%%% 35
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2023}]{bib31}
+\begin{botherref}
+\oauthor{\bsnm{Xu}, \binits{H.}},
+\oauthor{\bsnm{Pang}, \binits{G.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}}:
+Deep Isolation Forest for Anomaly Detection
+(2023).
+\url{http://dx.doi.org/10.1109/TKDE.2023.3270293}
+\end{botherref}
+\endbibitem
+
+%%% 36
+\bibitem[\protect\citeauthoryear{Tao et~al.}{2018}]{bib32}
+\begin{botherref}
+\oauthor{\bsnm{Tao}, \binits{X.}},
+\oauthor{\bsnm{Peng}, \binits{Y.}},
+\oauthor{\bsnm{Zhao}, \binits{F.}},
+\oauthor{\bsnm{Zhao}, \binits{P.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}}:
+A parallel algorithm for network traffic anomaly detection based on Isolation
+  Forest
+(2018).
+\url{http://dx.doi.org/10.1177/1550147718814471}
+\end{botherref}
+\endbibitem
+
+%%% 37
+\bibitem[\protect\citeauthoryear{Ripon et~al.}{2020}]{bib35}
+\begin{botherref}
+\oauthor{\bsnm{Ripon}, \binits{R.}},
+\oauthor{\bsnm{Sarker}, \binits{I.}},
+\oauthor{\bsnm{Anwar}, \binits{M.}},
+\oauthor{\bsnm{Furhad}, \binits{M.}},
+\oauthor{\bsnm{Rahat}, \binits{F.}},
+\oauthor{\bsnm{Hoque}, \binits{M.}},
+\oauthor{\bsnm{Sarfraz}, \binits{M.}}:
+An Isolation Forest Learning Based Outlier Detection Approach for Effectively
+  Classifying Cyber Anomalies
+(2020).
+\url{https://doi.org/10.48550/arXiv.2101.03141}
+\end{botherref}
+\endbibitem
+
+%%% 38
+\bibitem[\protect\citeauthoryear{Xiang et~al.}{2023}]{bib37}
+\begin{botherref}
+\oauthor{\bsnm{Xiang}, \binits{H.}},
+\oauthor{\bsnm{Zhang}, \binits{X.}},
+\oauthor{\bsnm{Hu}, \binits{H.}},
+\oauthor{\bsnm{Qi}, \binits{L.}},
+\oauthor{\bsnm{Dou}, \binits{W.}},
+\oauthor{\bsnm{Dras}, \binits{M.}},
+\oauthor{\bsnm{Beheshti}, \binits{A.}},
+\oauthor{\bsnm{Xu}, \binits{X.}}:
+OptIForest: Optimal Isolation Forest for Anomaly Detection
+(2023).
+\url{https://doi.org/10.24963/ijcai.2023/264}
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}

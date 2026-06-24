@@ -36,7 +36,7 @@ class PFPKECrypto:
         
         return {"svk": svk_bytes, "CT": ciphertext_bytes, "sigma": signature}
 
-    def decrypt(self, pk_f, fuzzy_picture_data, ciphertext, alpha=1.0, t_base=25.0, tau_nu_base=0.15):
+    def decrypt(self, pk_f, fuzzy_picture_data, ciphertext, alpha=1.0, t_base=25.0, tau_nu_base=0.30):
         x_prime = fuzzy_picture_data['raw']
         
         max_noise_allowed = tau_nu_base * alpha

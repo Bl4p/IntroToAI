@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Imrana, Yakubu
+AU  - Xiang, Yanping
+AU  - Ali, Liaqat
+AU  - Noor, Adeeb
+AU  - Sarpong, Kwabena
+AU  - Abdullah, Muhammed Amin
+PY  - 2024
+DA  - 2024/06/01
+TI  - CNN-GRU-FF: a double-layer feature fusion-based network intrusion detection system using convolutional neural network and gated recurrent units
+JO  - Complex & Intelligent Systems
+SP  - 3353
+EP  - 3370
+VL  - 10
+IS  - 3
+AB  - Identifying and preventing malicious network behavior is a challenge for establishing a secure network communication environment or system. Malicious activities in a network system can seriously threaten users’ privacy and potentially jeopardize the entire network infrastructure and functions. Furthermore, cyber-attacks have grown in complexity and number due to the ever-evolving digital landscape of computer and network devices in recent years. Analyzing network traffic using network intrusion detection systems (NIDSs) has become an integral security measure in modern networks to identify malicious and suspicious activities. However, most intrusion detection datasets contain imbalance classes, making it difficult for most existing classifiers to achieve good performance. In this paper, we propose a double-layer feature extraction and feature fusion technique (CNN-GRU-FF), which uses a modified focal loss function instead of the traditional cross-entropy to handle the class imbalance problem in the IDS datasets. We use the NSL-KDD and UNSW-NB15 datasets to evaluate the effectiveness of the proposed model. From the research findings, it is evident our CNN-GRU-FF method obtains a detection rate of 98.22% and 99.68% using the UNSW-NB15 and NSL-KDD datasets, respectively while maintaining low false alarm rates on both datasets. We compared the proposed model’s performance with seven baseline algorithms and other published methods in literature. It is evident from the performance results that our proposed method outperforms the state-of-the-art network intrusion detection methods.
+SN  - 2198-6053
+UR  - https://doi.org/10.1007/s40747-023-01313-y
+DO  - 10.1007/s40747-023-01313-y
+ID  - Imrana2024
+ER  - 

@@ -1,0 +1,16 @@
+TY  - JOUR
+AU  - K V K, Chithanya
+AU  - Reddy, V. Lokeswara
+PY  - 2026
+DA  - 2026/03/16
+TI  - Deep learning-based intrusion detection for cloud environments using Modified Stacked Bidirectional Gated Recurrent Unit
+JO  - Discover Computing
+SP  - 159
+VL  - 29
+IS  - 1
+AB  - Although cloud computing has so many benefits, such as improved productivity and cost reduction, its complexity and susceptibility to attacks pose new security challenges. The use of Intrusion Detection Systems (IDS) dates back many decades, however, the normal methods used are not very effective in detecting any malicious activity as well as there is high likelihood of false negative. To address these limitations, this study presents a new deep learning-based Intrusion Detection System, which can be deployed to cloud-based environments to alleviate these limitations. The system also includes a feature selection method which uses the Enhanced Cheetah Optimization Algorithm (ECOA) to reduce the dimensions of the dataset, therefore, enhancing functionality as well as decreasing the computing overhead. Data classification is done by a Modified Stacked Bidirectional Gated Recurrent Unit (MSBi-GRU) model that is complemented by a self-attention technique to promote the accuracy in the intrusion detection. The proposed system uses an Advanced Encryption Standard (AES) algorithm to protect the standard data. The performance of the system is measured on the basis of global data sets such as CICIDS2017 and UNSW-NB15 displaying its outstanding intrusion detection capabilities. The proposed framework is better than traditional ones and has a high detection accuracy and resistance to network threats. The system has an accuracy of 98.33 and 97.52 when using CICIDS2017 and UNSW-NB15 respectively, which implies that it can be applied in cloud-based security systems. Even though the experiments are carried out on popular IDS benchmark data (CICIDS2017 and UNSW-NB15), the developed MSBi-GRU framework is already cloud-ready. Its design can be directly modified to cloud-native telemetry like VPC Flow logs, CloudTrail logs, and IAM activity to guarantee that it can be applicable in a real-world cloud intrusion detection.
+SN  - 2948-2992
+UR  - https://doi.org/10.1007/s10791-026-10020-4
+DO  - 10.1007/s10791-026-10020-4
+ID  - K V K2026
+ER  - 
