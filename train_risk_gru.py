@@ -22,29 +22,35 @@ class TelemetryDataset(Dataset):
             sequence.append([0.0, 0.0, 0.0, 0.0])
 
             for _ in range(self.max_seq_len - 2):
-                time_diff = np.random.uniform(1.0, 72.0)
-                geo_dist = np.random.uniform(0.0, 15.0)
-                ip_changed = np.random.choice([0.0, 1.0], p=[0.9, 0.1])
-                dev_changed = 0.0
+                time_diff = np.random.exponential(scale=12.0) + 0.01
+                if np.random.rand() > 0.9:
+                    geo_dist = np.random.uniform(100.0, 5000.0)
+                else:
+                    geo_dist = np.random.exponential(scale=5.0)
+                ip_changed = np.random.choice([0.0, 1.0], p=[0.8, 0.2])
+                dev_changed = np.random.choice([0.0, 1.0], p=[0.9, 0.1])
                 sequence.append([time_diff, geo_dist, ip_changed, dev_changed])
 
             if is_anomaly == 1.0:
                 anomaly_type = np.random.choice(["impossible_travel", "new_device_brute"])
                 if anomaly_type == "impossible_travel":
-                    time_diff = np.random.uniform(0.1, 0.5)
-                    geo_dist = np.random.uniform(500.0, 8000.0)
-                    ip_changed = 1.0
+                    time_diff = np.random.uniform(0.1, 10.0)
+                    geo_dist = np.random.uniform(100.0, 5000.0)
+                    ip_changed = np.random.choice([0.0, 1.0], p=[0.1, 0.9])
                     dev_changed = np.random.choice([0.0, 1.0], p=[0.5, 0.5])
                 else:
-                    time_diff = np.random.uniform(0.001, 0.01)
-                    geo_dist = 0.0
-                    ip_changed = 1.0
-                    dev_changed = 1.0
+                    time_diff = np.random.uniform(0.01, 1.0)
+                    geo_dist = np.random.exponential(scale=5.0)
+                    ip_changed = np.random.choice([0.0, 1.0], p=[0.5, 0.5])
+                    dev_changed = np.random.choice([0.0, 1.0], p=[0.2, 0.8])
             else:
-                time_diff = np.random.uniform(1.0, 168.0)
-                geo_dist = np.random.uniform(0.0, 20.0)
-                ip_changed = np.random.choice([0.0, 1.0], p=[0.85, 0.15])
-                dev_changed = 0.0
+                time_diff = np.random.exponential(scale=12.0) + 0.01
+                if np.random.rand() > 0.9:
+                    geo_dist = np.random.uniform(100.0, 5000.0)
+                else:
+                    geo_dist = np.random.exponential(scale=5.0)
+                ip_changed = np.random.choice([0.0, 1.0], p=[0.7, 0.3])
+                dev_changed = np.random.choice([0.0, 1.0], p=[0.8, 0.2])
 
             sequence.append([time_diff, geo_dist, ip_changed, dev_changed])
 

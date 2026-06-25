@@ -20,17 +20,23 @@ def generate_synthetic_prompts(num_samples=5000):
             history_text += f"Log {i+1}: IP address {base_ip}, Location coordinates {base_geo[0]:.4f},{base_geo[1]:.4f}, Hardware Device {base_device[:8]}.\n"
 
         if is_attack:
-            # Simulate an Impossible Travel or Botnet IP jump
-            current_ip = "8.8.8.8" if np.random.rand() > 0.5 else "203.0.113.50"
-            current_geo = (51.5074, -0.1278) # London
-            current_device = "b4a1f9e2" + str(np.random.randint(1000, 9999))
-            target_alpha = np.random.uniform(0.3, 0.4) # Strict zero-trust floor
+            # Simulate an Impossible Travel or Botnet IP jump with realistic variations
+            current_ip = f"{np.random.randint(1, 255)}.{np.random.randint(1, 255)}.{np.random.randint(1, 255)}.{np.random.randint(1, 255)}"
+            # Sometimes attack is close, sometimes far
+            current_geo = (base_geo[0] + np.random.uniform(-30, 30), base_geo[1] + np.random.uniform(-30, 30))
+            # Attackers might hijack a session/device occasionally
+            current_device = base_device if np.random.rand() > 0.85 else "b4a1f9e2" + str(np.random.randint(1000, 9999))
+            target_alpha = np.random.uniform(0.1, 0.6) # Target alpha spans a wider range
         else:
-            # Simulate a normal, slightly varied legitimate login
-            current_ip = base_ip
-            current_geo = (base_geo[0] + np.random.uniform(-0.01, 0.01), base_geo[1] + np.random.uniform(-0.01, 0.01))
-            current_device = base_device
-            target_alpha = np.random.uniform(0.9, 1.0) # Highly trusted
+            # Simulate a normal login, but with occasional real-world noise (e.g., VPNs, new IPs)
+            current_ip = base_ip if np.random.rand() > 0.15 else f"192.168.1.{np.random.randint(2, 255)}"
+            current_geo = (base_geo[0] + np.random.uniform(-0.5, 0.5), base_geo[1] + np.random.uniform(-0.5, 0.5))
+            # VPN users might jump further randomly, simulating false positives in the training set
+            if np.random.rand() > 0.95:
+                current_geo = (base_geo[0] + np.random.uniform(-10, 10), base_geo[1] + np.random.uniform(-10, 10))
+            # User might log in from a new device occasionally
+            current_device = base_device if np.random.rand() > 0.05 else "6f5129ac" + str(np.random.randint(1000, 9999))
+            target_alpha = np.random.uniform(0.65, 1.0)
 
         # Calculate haversine distance for the prompt
         lat1, lon1, lat2, lon2 = map(math.radians, [base_geo[0], base_geo[1], current_geo[0], current_geo[1]])

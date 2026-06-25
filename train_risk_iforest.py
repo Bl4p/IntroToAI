@@ -15,16 +15,19 @@ def generate_feature_vectors(num_normal=8000, num_anomaly=2000, max_hist_len=4):
 
     # Generate NORMAL samples
     for _ in range(num_normal):
-        time_diff = np.random.uniform(1.0, 168.0)
-        geo_dist = np.random.uniform(0.0, 20.0)
-        ip_changed = np.random.choice([0.0, 1.0], p=[0.85, 0.15])
-        dev_changed = 0.0
+        time_diff = np.random.exponential(scale=12.0) + 0.01
+        if np.random.rand() > 0.9:
+            geo_dist = np.random.uniform(100.0, 5000.0)
+        else:
+            geo_dist = np.random.exponential(scale=5.0)
+        ip_changed = np.random.choice([0.0, 1.0], p=[0.7, 0.3])
+        dev_changed = np.random.choice([0.0, 1.0], p=[0.8, 0.2])
 
         # Simulate normal historical aggregate stats
-        mean_hist_time = np.random.uniform(4.0, 72.0)
-        mean_hist_dist = np.random.uniform(0.0, 15.0)
-        max_hist_dist = mean_hist_dist + np.random.uniform(0.0, 10.0)
-        hist_ip_rate = np.random.uniform(0.0, 0.15)
+        mean_hist_time = np.random.uniform(2.0, 48.0)
+        mean_hist_dist = np.random.exponential(scale=50.0)
+        max_hist_dist = mean_hist_dist + np.random.exponential(scale=500.0)
+        hist_ip_rate = np.random.uniform(0.0, 0.5)
 
         features.append([time_diff, geo_dist, ip_changed, dev_changed,
                          mean_hist_time, mean_hist_dist, max_hist_dist, hist_ip_rate])
@@ -34,20 +37,20 @@ def generate_feature_vectors(num_normal=8000, num_anomaly=2000, max_hist_len=4):
     for _ in range(num_anomaly):
         anomaly_type = np.random.choice(["impossible_travel", "brute_force"])
         if anomaly_type == "impossible_travel":
-            time_diff = np.random.uniform(0.05, 0.5)
-            geo_dist = np.random.uniform(500.0, 8000.0)
-            ip_changed = 1.0
+            time_diff = np.random.uniform(0.1, 10.0)
+            geo_dist = np.random.uniform(100.0, 5000.0)
+            ip_changed = np.random.choice([0.0, 1.0], p=[0.1, 0.9])
             dev_changed = np.random.choice([0.0, 1.0], p=[0.5, 0.5])
         else:
-            time_diff = np.random.uniform(0.001, 0.01)
-            geo_dist = 0.0
-            ip_changed = 1.0
-            dev_changed = 1.0
+            time_diff = np.random.uniform(0.01, 1.0)
+            geo_dist = np.random.exponential(scale=5.0)
+            ip_changed = np.random.choice([0.0, 1.0], p=[0.5, 0.5])
+            dev_changed = np.random.choice([0.0, 1.0], p=[0.2, 0.8])
 
-        mean_hist_time = np.random.uniform(4.0, 72.0)
-        mean_hist_dist = np.random.uniform(0.0, 15.0)
-        max_hist_dist = mean_hist_dist + np.random.uniform(0.0, 10.0)
-        hist_ip_rate = np.random.uniform(0.0, 0.15)
+        mean_hist_time = np.random.uniform(2.0, 48.0)
+        mean_hist_dist = np.random.exponential(scale=50.0)
+        max_hist_dist = mean_hist_dist + np.random.exponential(scale=500.0)
+        hist_ip_rate = np.random.uniform(0.0, 0.5)
 
         features.append([time_diff, geo_dist, ip_changed, dev_changed,
                          mean_hist_time, mean_hist_dist, max_hist_dist, hist_ip_rate])
