@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Metrics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+        .chart-wrapper {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #34495e;
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Isolated Risk Engine Performance Metrics</h1>
+        
+        <div class="chart-wrapper">
+            <h2>Classification Accuracy Metrics (ROC-AUC, PR-AUC, EER)</h2>
+            <div class="chart-container">
+                <canvas id="accuracyChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-wrapper">
+            <h2>Inference Latency (ms)</h2>
+            <div class="chart-container">
+                <canvas id="latencyChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const models = ['TG-GRU', 'Isolation Forest', 'Transformer'];
+
+        // Data from Table 1
+        const rocAuc = [0.036, 0.856, 0.522];
+        const prAuc = [0.089, 0.386, 0.365];
+        const eer = [0.879, 0.194, 0.512];
+        const latency = [0.173, 6.176, 0.360];
+
+        // Chart 1: Accuracy Metrics (Grouped Bar Chart)
+        const ctxAccuracy = document.getElementById('accuracyChart').getContext('2d');
+        new Chart(ctxAccuracy, {
+            type: 'bar',
+            data: {
+                labels: models,
+                datasets: [
+                    {
+                        label: 'ROC-AUC (Higher is better)',
+                        data: rocAuc,
+                        backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                        borderColor: 'rgba(52, 152, 219, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'PR-AUC (Higher is better)',
+                        data: prAuc,
+                        backgroundColor: 'rgba(46, 204, 113, 0.7)',
+                        borderColor: 'rgba(46, 204, 113, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'EER (Lower is better)',
+                        data: eer,
+                        backgroundColor: 'rgba(231, 76, 60, 0.7)',
+                        borderColor: 'rgba(231, 76, 60, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 1.0,
+                        title: {
+                            display: true,
+                            text: 'Score'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Latency Metrics (Bar Chart)
+        const ctxLatency = document.getElementById('latencyChart').getContext('2d');
+        new Chart(ctxLatency, {
+            type: 'bar',
+            data: {
+                labels: models,
+                datasets: [
+                    {
+                        label: 'Mean Latency (ms)',
+                        data: latency,
+                        backgroundColor: [
+                            'rgba(155, 89, 182, 0.7)',
+                            'rgba(241, 196, 15, 0.7)',
+                            'rgba(52, 73, 94, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(155, 89, 182, 1)',
+                            'rgba(241, 196, 15, 1)',
+                            'rgba(52, 73, 94, 1)'
+                        ],
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Milliseconds (ms)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

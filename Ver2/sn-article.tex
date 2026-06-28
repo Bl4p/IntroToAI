@@ -452,6 +452,20 @@ Isolation Forest & 66.84 & 0.4376 & 0.5644 & 6.176 \\
 \end{tabular}
 \end{table}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{accuracy_chart.png}
+	\caption{Classification Accuracy Metrics (ROC-AUC, PR-AUC, EER)}
+	\label{fig:accuracy_chart}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{latency_chart.png}
+	\caption{Inference Latency (ms)}
+	\label{fig:latency_chart}
+\end{figure}
+
 \subsection{Latency, Size, and Scalability}
 Inference latency is a critical metric, as the risk engine sits directly in the authentication critical path. The \textbf{TG-GRU} exhibited the lowest latency ($0.173$ ms) owing to its highly compressed, recurrent parameter state. The \textbf{Transformer} remained exceptionally fast ($0.360$ ms), demonstrating that lightweight attention mechanisms can operate natively without friction. The \textbf{Isolation Forest} exhibited the highest latency ($6.176$ ms); however, at sub-10 milliseconds, all three models definitively prove that contextual telemetry evaluation will not induce noticeable human delays during key extraction. 
 
